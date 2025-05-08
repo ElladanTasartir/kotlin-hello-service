@@ -5,3 +5,5 @@
 build
 .git-credentials
 .askpass.sh
+.kotlin
+.idea

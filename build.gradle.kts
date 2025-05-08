@@ -9,6 +9,7 @@
 plugins {
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
     alias(libs.plugins.kotlin.jvm)
+    kotlin("plugin.serialization") version "1.9.23"
 
     // Apply the application plugin to add support for building a CLI application in Java.
     application
@@ -27,6 +28,10 @@ dependencies {
 
     implementation("io.ktor:ktor-server-core-jvm:2.3.4")
     implementation("io.ktor:ktor-server-netty-jvm:2.3.4")
+    implementation("io.ktor:ktor-server-content-negotiation:2.3.4")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.4")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
+    implementation("io.ktor:ktor-server-status-pages:2.3.4")
 
     // Guice
     implementation("com.google.inject:guice:7.0.0")
