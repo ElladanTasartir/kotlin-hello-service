@@ -5,5 +5,6 @@ import com.google.inject.Guice
 
 fun main() {
     val injector = Guice.createInjector(ApplicationModule())
-    Server.start(injector)
+    val server = injector.getInstance(Server::class.java)
+    server.start()
 }
